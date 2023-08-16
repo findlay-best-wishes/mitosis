@@ -7,7 +7,7 @@ import { isValidAttributeName } from '../../helpers/is-valid-attribute-name';
 import { getForArguments } from '../../helpers/nodes/for';
 import { isSlotProperty } from '../../helpers/slots';
 import { MitosisComponent } from '../../types/mitosis-component';
-import { checkIsForNode, ForNode, MitosisNode } from '../../types/mitosis-node';
+import { ForNode, MitosisNode, checkIsForNode } from '../../types/mitosis-node';
 import { closeFrag, getFragment, openFrag, processBinding, wrapInFragment } from './helpers';
 import { updateStateSettersInCode } from './state';
 import { ToReactOptions } from './types';
@@ -113,6 +113,10 @@ const ATTTRIBUTE_MAPPERS: { [key: string]: string } = {
   autocapitalize: 'autoCapitalize',
   autocomplete: 'autoComplete',
   for: 'htmlFor',
+  readonly: 'readOnly',
+  autofocus: 'autoFocus',
+  inputmode: 'inputMode',
+  enterkeyhint: 'enterKeyHint'
 };
 
 // TODO: Maybe in the future allow defining `string | function` as values
